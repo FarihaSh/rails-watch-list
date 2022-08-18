@@ -1,0 +1,17 @@
+<div class="banner-list" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1459&q=80')">
+<h1> All your favorite movies</h1>
+</div>
+
+<div class="card-show-movie">
+  <%= image_tag @movie.poster_url, class:"poster-img" %>
+  <div class="card-show-movie-text">
+    <h4><strong><%= @movie.title %> • <%= @movie.rating %><i class="fas fa-star star-yellow"></i></strong></h4>
+    <p><%= @movie.overview %></p>
+    <%= link_to 'Edit', edit_movie_path(@movie), class: "btn btn-success"  %>
+    <%= link_to "Delete",
+      movie_path(@movie),
+      method: :delete,
+      data: { confirm: "Are you sure?" }, class: "ms-3 text-danger" %></div>
+    </div>
+  </div>
+</div>
