@@ -50,12 +50,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_18_124604) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "boomarks", force: :cascade do |t|
-    t.text "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "lists", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
