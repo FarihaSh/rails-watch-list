@@ -19,17 +19,11 @@
 
             <div class="show-delete">
               <%= link_to "See more", movie_path(bookmark.movie) %>
-              <%= link_to "Delete",
-                            bookmark_path(bookmark),
-                            method: :delete,
-                            data: { confirm: "Are you sure?" } %>
+              <%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %>
             </div>
           </div>
         </div>
       <% end %>
   </div>
-  <%= button_to "Delete list",
-                        list_path(@list),
-                        method: :delete,
-                        data: { confirm: "Are you sure?" }, class: "btn btn-success" %>
+  <%= button_to "Delete list", list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-success" %>
 </div>
